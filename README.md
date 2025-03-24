@@ -1,28 +1,25 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+# Cypress, do Zero à Nuvem
+Este é um projeto do curso de Cypress do instrutor Walmyr Filho da escola Talking About Testing.
 
-👋 Seja bem-vindo(a)!
+## Pré-requisitos
+Algumas tecnologias e ferramentas são necessárias para rodar o projeto, sendo elas:
+- git, versão sugerida `2.43.0`
+- node.js, versão sugerida `v22.11.0`
+- npm, versão sugerida `11.2.0`
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+## Instalação
+No terminal, rode `npm install` ou `npm i` para instalar as dependências necessárias.
 
-## O que você vai aprender?
+## Testes
+Neste projeto existem duas possibilidades de viewport para rodar os testes: desktop ou mobile.
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+__Desktop__
+- Para o modo assistido, use o script: `npm run cy:open:web`
+- Para o modo headless, use o script: `npm run cy:run:web`
 
-## Vamos começar?
+__Mobile__
+- Para o modo assistido, use o script: `npm run cy:open:mobile`
+- Para o modo headless, use o script: `npm run cy:run:mobile`
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
-
-___
-
-Este é um curso da **Escola Talking About Testing**.
+---
+Para mais informações sobre cursos ou materiais sobre Cypress, acesse o site da escola [Talking about Testing](https://talkingabouttesting.com/).
