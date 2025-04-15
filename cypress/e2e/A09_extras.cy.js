@@ -21,7 +21,7 @@ describe("Course: Cypress, do Zero à Nuvem - Seção 13: Avançando no uso do C
       .invoke("val", "Preenchendo com invoke")
       .should("have.value", "Preenchendo com invoke");
   });
-  it.only("Realizar uma requisição HTTP", () => {
+  it("Realizar uma requisição HTTP", () => {
     cy.request(
       "GET",
       "https://cac-tat-v3.s3.eu-central-1.amazonaws.com/index.html"
@@ -32,7 +32,7 @@ describe("Course: Cypress, do Zero à Nuvem - Seção 13: Avançando no uso do C
       expect(response.body).to.include("CAC TAT");
     });
   });
-  it.only("Realizar uma requisição HTTP 2", () => {
+  it("Realizar uma requisição HTTP 2", () => {
     cy.request(
       "GET",
       "https://cac-tat-v3.s3.eu-central-1.amazonaws.com/index.html"
