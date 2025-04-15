@@ -2,14 +2,18 @@ describe("Central de Atendimento ao Cliente TAT", () => {
   beforeEach(() => cy.visit("/src/index.html"));
 
   // Seção 3: Localizando, digitando e clicando em elementos
-  it("Preencher os campos obrigatórios e enviar o formulário.", () => {
-    cy.get("#firstName").type("Pafuncio");
-    cy.get('input[name="lastName"]').type("Fulanovich");
-    cy.get('input[type="email"]').type("pafuncio@terra.com");
-    cy.get("textarea").type("This is a feedback.", { delay: 10 });
-    cy.get(".button").click();
-
-    cy.get(".success").should("be.visible");
+  Cypress._.times(3, () => {
+    it.only("Preencher os campos obrigatórios e enviar o formulário.", () => {
+      cy.get("#firstName").type("Pafuncio");
+      cy.get('input[name="lastName"]').type("Fulanovich");
+      cy.get('input[type="email"]').type("pafuncio@terra.com");
+      cy.get("textarea").type("This is a feedback.", { delay: 10 });
+      cy.clock();
+      cy.get(".button").click();
+      cy.get(".success").should("be.visible");
+      cy.tick(3000);
+      cy.get(".success").should("not.be.visible");
+    });
   });
   it("Exibir mensagem de erro ao submeter formulário com email inválido", () => {
     cy.get("#firstName").type("Pafuncio");
